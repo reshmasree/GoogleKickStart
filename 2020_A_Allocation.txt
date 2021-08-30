@@ -1,0 +1,24 @@
+t=int(input())
+tc=1
+while t:
+    
+    n,b=input().split(" ")
+    n=int(n)
+    b=int(b)
+    
+    l=[]
+    ans=0
+    a=input().split(" ")
+    for i in a:
+        l.append(int(i))
+    l.sort()
+    for j in l:
+        if j<=b:
+            ans=ans+1 
+            b=b-j
+        else:
+             break
+    print("Case #%d: %d" % (tc,ans))
+    t=t-1
+    tc=tc+1
+#print(t)
